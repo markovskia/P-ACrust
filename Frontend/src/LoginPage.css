@@ -1,0 +1,144 @@
+body {
+  font-family: "Rubik Dirt", system-ui;
+  font-style: normal;
+    background: url("images/red-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.login-container {
+  display: flex;
+
+  color: white;
+    height: 100%;
+}
+
+.sidebar {
+  padding: 30px 20px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo2 {
+  width: 100px;
+  height: 100px;
+}
+
+
+.wrap{
+  display: flex;
+  margin-top: 150px;
+  background-image: url("./images/secondPizza.png");
+  position: relative;
+  background-repeat: no-repeat;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text-part{
+  width: 500px;
+  text-align: right;
+  font-size: xx-large;
+}
+.no-margin{
+  margin: 0px;
+}
+
+.no-margin{
+  margin: 0px;
+}
+.login-part{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.secondImg{
+  width: 700px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  background: white;
+  border-radius: 30px;
+  padding: 40px 30px;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #888;
+  font-family: 'Rubik Dirt', sans-serif;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 2px solid #D32F2F;
+  font-size: 16px;
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  background-color: #d62828;
+  font-family: 'Rubik Dirt', sans-serif;
+  border: none;
+  font-size: 15px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.separator hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.separator span {
+  margin: 0 10px;
+  white-space: nowrap;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 20px;
+}
+.google-btn, .facebook-btn {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #d62828;
+  padding: 5px 10px;
+}
+
