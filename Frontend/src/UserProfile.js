@@ -6,7 +6,7 @@ import secondPizza from "./images/secondPizza.png"
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
-export default function UserProfile({loggedUser, setLoggedUser}) {
+export default function UserProfile({loggedUser, setLoggedUser, logout}) {
     const navigate = useNavigate();
 
     const [email, setEmail] = useState(loggedUser.email);
@@ -17,8 +17,48 @@ export default function UserProfile({loggedUser, setLoggedUser}) {
     const [phone, setPhone] = useState(loggedUser.phone || "");
 
 
-
+    // const handleSave = async () => {
+    //     if (password && password !== confirmPassword) {
+    //         alert("Лозинките не се совпаѓаат.");
+    //         return;
+    //     }
+    //
+    //     const token = localStorage.getItem("access");
+    //
+    //     try {
+    //         await axios.put(`http://localhost:8000/api/users/${loggedUser.id}/`, {
+    //             email,
+    //             username,
+    //             password: password || undefined,
+    //             address,
+    //             phone
+    //         }, {
+    //             headers: {
+    //                 Authorization: `Bearer ${token}`
+    //             }
+    //         });
+    //
+    //         const updatedUser = await axios.get("http://localhost:8000/api/user/", {
+    //             headers: {
+    //                 Authorization: `Bearer ${token}`
+    //             }
+    //         });
+    //
+    //         setLoggedUser(updatedUser.data);
+    //
+    //         alert("Податоците се успешно зачувани!");
+    //         navigate("/");
+    //     } catch (err) {
+    //         console.error(err);
+    //         alert("Грешка при зачувување на податоците.");
+    //     }
+    // };
     const handleSave = async () => {
+        if (!loggedUser?.id) {
+            alert("Грешка: корисничкиот ID не е достапен.");
+            return;
+        }
+
         if (password && password !== confirmPassword) {
             alert("Лозинките не се совпаѓаат.");
             return;
@@ -54,15 +94,16 @@ export default function UserProfile({loggedUser, setLoggedUser}) {
             alert("Грешка при зачувување на податоците.");
         }
     };
-
     return (
-        <div>
+        <div className="local-background">
             <div className="navigation-bar">
                 <div className="logodiv">
                     <img className="logo" src={PACrustLogo} alt={PACrustLogo} onClick={() => navigate("/")}/>
                 </div>
                 <div className="nav-right-part">
                     <div className="phone">📞 075-142-589</div>
+                    <button className="logout-btn" onClick={logout}>LOG OUT</button>
+
                     <button
                         className="login-btn"
                         onClick={() => {
@@ -86,7 +127,7 @@ export default function UserProfile({loggedUser, setLoggedUser}) {
                     <p>ABOUT US</p>
                 </div>
             </div>
-            <div><h1 className="theUser">{loggedUser?.username || "No user logged in"}</h1></div>
+            <div><h1 className="theUser">{loggedUser?.username || "No user logged in"}'s profile</h1></div>
             <div>
                 <div className="separated">
                     <div><p className="separatedText">Mail</p></div>

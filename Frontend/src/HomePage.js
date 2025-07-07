@@ -20,7 +20,7 @@ import {FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp} from 'react-icons/fa';
 import {useNavigate} from 'react-router-dom';
 
 
-export default function HomePage({loggedUser}) {
+export default function HomePage({loggedUser, logout}) {
     const navigate = useNavigate();
 
     return (
@@ -51,6 +51,9 @@ export default function HomePage({loggedUser}) {
                 <main className="main-content">
                     <div className="top-bar">
                         <div className="phone">📞 075-142-589</div>
+                        {loggedUser && (
+                            <button className="logout-btn" onClick={logout}>LOG OUT</button>
+                        )}
                         <button
                             className="login-btn"
                             onClick={() => {

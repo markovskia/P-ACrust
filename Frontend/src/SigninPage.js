@@ -7,7 +7,7 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
 
-export default function SigninPage({setLoggedUser}) {
+export default function SigninPage({setLoggedUser, logout}) {
     const navigate = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setFirstPassword] = useState("");

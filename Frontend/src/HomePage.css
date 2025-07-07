@@ -1,386 +1,408 @@
 /* PizzaLanding.css */
 @font-face {
-  font-family: 'Rubik Dirt';
-  src: url('./fonts/RubikDirt-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Rubik Dirt';
+    src: url('./fonts/RubikDirt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
-  font-family: "Rubik Dirt", system-ui;
-  font-style: normal;
+    font-family: "Rubik Dirt", system-ui;
+    font-style: normal;
 }
 
 .pizza-container {
-  display: flex;
-  background: url("images/red-background.jpg");
-  background-repeat: no-repeat;
-  color: white;
+    display: flex;
+    background: url("images/red-background.jpg");
+    background-repeat: no-repeat;
+    color: white;
 }
 
 .sidebar {
-  padding: 30px 20px;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    padding: 30px 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 /*.logodiv{*/
 /*  width: 300px;*/
 /*}*/
 .logo {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
 }
-
 
 
 .nav-links {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
-  align-items: center;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  border-right: 1px solid white;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    border-right: 1px solid white;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: x-large;
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
 }
 
 .nav-links a:hover {
-  color: #ff4040;
+    color: #ff4040;
 }
 
 .main-content {
-  flex: 1;
-  padding: 30px;
-  padding-right: 0px;
-  position: relative;
+    flex: 1;
+    padding: 30px;
+    padding-right: 0px;
+    position: relative;
 }
 
 .top-bar {
-  position: absolute;
-  top: 40px;
-  right: 30px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .phone {
-  font-size: 20px;
-  color: #ffd2d2;
+    font-size: 20px;
+    color: #ffd2d2;
 }
 
 .login-btn {
-  background-color: #d62828;
-  font-family: 'Rubik Dirt', sans-serif;
-  border: none;
-  font-size: 15px;
-  padding: 10px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  color: white;
+    background-color: #d62828;
+    font-family: 'Rubik Dirt', sans-serif;
+    border: none;
+    font-size: 15px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
 }
 
-.fontHome { font-size: xx-large;}
+.logout-btn {
+    color: #d62828;
+    background-image: url("./images/white-background.png");
+    font-family: 'Rubik Dirt', sans-serif;
+    border: none;
+    font-size: 15px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.fontHome {
+    font-size: xx-large;
+}
 
 .login-btn:hover {
-  background-color: #cc0000;}
+    background-color: #cc0000;
+}
 
 .content-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 60px;
 }
 
 .text-section {
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .text-section .h1-part p {
-  color: #e53636;
-  font-size: 48px;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  margin-top: 0px;
+    color: #e53636;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    margin-top: 0px;
 }
 
-.text-section .button-part button{
+.text-section .button-part button {
     font-family: 'Rubik Dirt', sans-serif;
 }
 
 .text-section .p-part p {
-  font-size: 15px;
-  line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.8;
 }
-.dine-text{
-  color: #d62828;
-  font-size: 48px;
-  margin-bottom: 20px;
+
+.dine-text {
+    color: #d62828;
+    font-size: 48px;
+    margin-bottom: 20px;
 }
+
 .order-btn {
-  margin-top: 30px;
-  background-color: #d62828;
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 30px;
-  cursor: pointer;
+    margin-top: 30px;
+    background-color: #d62828;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
 }
 
 .order-btn:hover {
-  background-color: #cc0000;
+    background-color: #cc0000;
 }
 
 .image-section img {
-  height: 650px;
+    height: 650px;
 }
 
 
 .dine-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  text-align: center;
-  background-image: url("./images/white-background.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    background-image: url("./images/white-background.png");
 }
 
 .text-content h2 {
-  color: #d62828;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+    color: #d62828;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 .text-content p {
-  color: #d62828;
-  max-width: 600px;
-  margin: auto;
-  line-height: 1.6;
+    color: #d62828;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
 }
 
 .text-content button {
-  margin-top: 1rem;
-  background-color: #d62828;
-  font-family: 'Rubik Dirt', sans-serif;
-  border: none;
-  font-size: 15px;
-  padding: 10px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  color: white;
+    margin-top: 1rem;
+    background-color: #d62828;
+    font-family: 'Rubik Dirt', sans-serif;
+    border: none;
+    font-size: 15px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
 }
 
 .gallery {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .main-image {
-  width: 80%;
-  max-width: 600px;
-  border-radius: 8px;
-  margin-right: 1rem;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-right: 1rem;
 }
 
 .gallery-small {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
 .gallery-small img {
-  width: 250px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
+    width: 250px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
 }
+
 /* Existing styles above this remain unchanged */
 
 .promo-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-image: url("images/red-background.jpg");
-  color: white;
-  padding: 2rem;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("images/red-background.jpg");
+    color: white;
+    padding: 2rem;
+    flex-wrap: wrap;
 }
 
 .promo-text {
-  max-width: 35%;
-  margin-left: 10px;
+    max-width: 35%;
+    margin-left: 10px;
 }
-
 
 
 .promo-text p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .promo-text-heading {
-  font-size: 48px;
-  color: #ff3333;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+    font-size: 48px;
+    color: #ff3333;
+    line-height: 1.2;
+    margin-bottom: 1rem;
 }
+
 .promo-text button {
-  background-color: #d62828;
-  font-family: 'Rubik Dirt', sans-serif;
-  border: none;
-  font-size: 15px;
-  padding: 10px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  color: white;
+    background-color: #d62828;
+    font-family: 'Rubik Dirt', sans-serif;
+    border: none;
+    font-size: 15px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
 
 }
 
 .promo-images {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 55%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 55%;
 }
 
 .main-promo-image {
-  width: 52%;
-  margin-bottom: 1rem;
-  border-radius: 80%;
+    width: 52%;
+    margin-bottom: 1rem;
+    border-radius: 80%;
 
 }
 
 .promo-ingredients {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .promo-ingredients img {
-  width: 42%;
+    width: 42%;
 }
-.promo-button{
-  display: flex;
-  flex-direction: row-reverse;
+
+.promo-button {
+    display: flex;
+    flex-direction: row-reverse;
 }
-.bel-text{
-  color: white;
+
+.bel-text {
+    color: white;
 }
+
 .promotions {
-  text-align: center;
-  padding: 1rem 1rem;
-  padding-bottom: 3rem;
-  background-image: url("images/white-background.png");
+    text-align: center;
+    padding: 1rem 1rem;
+    padding-bottom: 3rem;
+    background-image: url("images/white-background.png");
 }
 
 .promotions-title {
-  font-size: 3rem;
-  color: #b72b2b;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+    font-size: 3rem;
+    color: #b72b2b;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .promotion-cards {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .promotion-card {
-  margin-top: 3rem;
-  background-image: url("images/red-background.jpg");
-  border-radius: 20px;
-  padding-top: 3.5rem;
-  padding-bottom: 1rem;
-  width: 20%;
-  color: white;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 3rem;
+    background-image: url("images/red-background.jpg");
+    border-radius: 20px;
+    padding-top: 3.5rem;
+    padding-bottom: 1rem;
+    width: 20%;
+    color: white;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .promotion-card img {
-  width: 70%;
-  border-radius: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    border-radius: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .promotion-card p {
-  margin-top: 7rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+    margin-top: 7rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .promotion-card button {
-  background-color: #d62828;
-  font-family: 'Rubik Dirt', sans-serif;
-  border: none;
-  font-size: 15px;
-  padding: 10px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  color: white;
+    background-color: #d62828;
+    font-family: 'Rubik Dirt', sans-serif;
+    border: none;
+    font-size: 15px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
 }
+
 .footer {
-  background-image: url("images/red-background.jpg");
-  color: #f5f0e1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  flex-wrap: wrap;
-  text-align: center;
+    background-image: url("images/red-background.jpg");
+    color: #f5f0e1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .footer-left, .footer-center, .footer-right {
-  flex: 1;
-  min-width: 180px;
-  margin: 0.5rem 0;
+    flex: 1;
+    min-width: 180px;
+    margin: 0.5rem 0;
 }
 
 .footer-center p,
 .footer-right p {
-  margin: 0.2rem 0;
-  font-size: 0.95rem;
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
 }
 
 .social-icon {
-  font-size: 1.4rem;
-  margin: 0 0.5rem;
-  cursor: pointer;
-  color: white;
-  transition: transform 0.3s, color 0.3s;
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s, color 0.3s;
 }
 
 .social-icon:hover {
-  color: #ff3333;
-  transform: scale(1.2);
+    color: #ff3333;
+    transform: scale(1.2);
 }
 
 /*----*/

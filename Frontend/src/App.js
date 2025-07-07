@@ -17,58 +17,73 @@ function ProtectedRoute({loggedUser, children}) {
 }
 
 function App() {
-    // const [loggedUser, setLoggedUser] = useState(() => {
-    //   localStorage.removeItem("loggedUser")
-    //   const savedUser = localStorage.getItem('loggedUser');
-    //   return savedUser ? JSON.parse(savedUser) : null;
-    // });
-    //
-    // useEffect(() => {
-    //   if (loggedUser) {
-    //     localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
-    //   } else {
-    //     localStorage.removeItem('loggedUser');
-    //   }
-    // }, [loggedUser]);
-    //   return (
-    //   <BrowserRouter>
-    //     <Routes>
-    //       <Route path="/" element={<HomePage loggedUser={loggedUser} />} />
-    //       <Route path="/login" element={<LoginPage setLoggedUser={setLoggedUser} />} />
-    //       <Route path="/signin" element={<SigninPage setLoggedUser={setLoggedUser}/>} />
-    //       <Route path="/profile" element={<ProtectedRoute loggedUser={loggedUser}> <UserProfile loggedUser={loggedUser} /></ProtectedRoute>} />
-    //
-    //     </Routes>
-    //   </BrowserRouter>
-    // );
-    const [loggedUser, setLoggedUser] = useState(null);
+    const [loggedUser, setLoggedUser] = useState(() => {
+        const savedUser = localStorage.getItem('loggedUser');
+        return savedUser ? JSON.parse(savedUser) : null;
+    });
+
+    const isTokenExpired = (token) => {
+        try {
+            const [, payloadBase64] = token.split('.');
+            const payload = JSON.parse(atob(payloadBase64));
+            const currentTime = Math.floor(Date.now() / 1000);
+            return payload.exp < currentTime;
+        } catch (e) {
+            return true;
+        }
+    };
+
+    const logout = () => {
+        localStorage.removeItem('access');
+        localStorage.removeItem('refresh');
+        localStorage.removeItem('loggedUser');
+        setLoggedUser(null);
+    };
+
 
     useEffect(() => {
         const token = localStorage.getItem('access');
-        if (token) {
+
+        if (token && !isTokenExpired(token)) {
             axios.get('http://localhost:8000/api/user/', {
-                headers: {Authorization: `Bearer ${token}`}
-            }).then(res => {
-                console.log('Logged user:', res.data);
-                setLoggedUser(res.data);
-            }).catch(() => {
-                localStorage.removeItem('access');
-                setLoggedUser(null);
-            });
+                headers: {Authorization: `Bearer ${token}`},
+            })
+                .then(res => {
+                    console.log('Logged user:', res.data);
+                    setLoggedUser(res.data);
+                })
+                .catch(() => {
+                    localStorage.removeItem('access');
+                    localStorage.removeItem('refresh');
+                    setLoggedUser(null);
+                });
+        } else {
+            localStorage.removeItem('access');
+            localStorage.removeItem('refresh');
+            localStorage.removeItem('loggedUser');
+            setLoggedUser(null);
         }
     }, []);
+
+    useEffect(() => {
+        if (loggedUser) {
+            localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+        } else {
+            localStorage.removeItem('loggedUser');
+        }
+    }, [loggedUser]);
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<HomePage loggedUser={loggedUser}/>}/>
-                <Route path="/login" element={<LoginPage setLoggedUser={setLoggedUser}/>}/>
-                <Route path="/signin" element={<SigninPage setLoggedUser={setLoggedUser}/>}/>
+                <Route path="/" element={<HomePage loggedUser={loggedUser} logout={logout}/>}/>
+                <Route path="/login" element={<LoginPage setLoggedUser={setLoggedUser} logout={logout}/>}/>
+                <Route path="/signin" element={<SigninPage setLoggedUser={setLoggedUser} logout={logout} />}/>
                 <Route
                     path="/profile"
                     element={
                         <ProtectedRoute loggedUser={loggedUser}>
-                            <UserProfile loggedUser={loggedUser} setLoggedUser={setLoggedUser}/>
+                            <UserProfile loggedUser={loggedUser} setLoggedUser={setLoggedUser} logout={logout} />
                         </ProtectedRoute>
                     }
                 />
