@@ -1,8 +1,7 @@
 body {
   font-family: "Rubik Dirt", system-ui;
   font-style: normal;
-    background: url("images/red-background.jpg");
-  background-repeat: no-repeat;
+  background: url("images/red-background.jpg") no-repeat;
 }
 
 .login-container {
@@ -23,6 +22,7 @@ body {
 .logo2 {
   width: 100px;
   height: 100px;
+  cursor: pointer;
 }
 
 
@@ -142,3 +142,12 @@ body {
   padding: 5px 10px;
 }
 
+
+.sign-in {
+  color: #d62828;
+}
+
+.sign-in:hover{
+  color: #841919;
+  cursor: pointer;
+}

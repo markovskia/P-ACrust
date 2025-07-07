@@ -25,12 +25,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.logodiv{
-  width: 300px;
-}
+/*.logodiv{*/
+/*  width: 300px;*/
+/*}*/
 .logo {
   width: 100px;
   height: 100px;
+  cursor: pointer;
 }
 
 
