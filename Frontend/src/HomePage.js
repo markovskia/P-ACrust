@@ -33,7 +33,7 @@ export default function HomePage({loggedUser, logout}) {
                     </div>
                     <nav className="nav-links">
                         <div>
-                            <a className="fontHome" href="#">MENU</a>
+                            <a className="fontHome" onClick={() => navigate("/menu")}>MENU</a>
                         </div>
                         <div>
                             <a className="fontHome" href="#">RESERVE TABLE</a>

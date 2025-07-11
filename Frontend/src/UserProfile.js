@@ -17,42 +17,6 @@ export default function UserProfile({loggedUser, setLoggedUser, logout}) {
     const [phone, setPhone] = useState(loggedUser.phone || "");
 
 
-    // const handleSave = async () => {
-    //     if (password && password !== confirmPassword) {
-    //         alert("Лозинките не се совпаѓаат.");
-    //         return;
-    //     }
-    //
-    //     const token = localStorage.getItem("access");
-    //
-    //     try {
-    //         await axios.put(`http://localhost:8000/api/users/${loggedUser.id}/`, {
-    //             email,
-    //             username,
-    //             password: password || undefined,
-    //             address,
-    //             phone
-    //         }, {
-    //             headers: {
-    //                 Authorization: `Bearer ${token}`
-    //             }
-    //         });
-    //
-    //         const updatedUser = await axios.get("http://localhost:8000/api/user/", {
-    //             headers: {
-    //                 Authorization: `Bearer ${token}`
-    //             }
-    //         });
-    //
-    //         setLoggedUser(updatedUser.data);
-    //
-    //         alert("Податоците се успешно зачувани!");
-    //         navigate("/");
-    //     } catch (err) {
-    //         console.error(err);
-    //         alert("Грешка при зачувување на податоците.");
-    //     }
-    // };
     const handleSave = async () => {
         if (!loggedUser?.id) {
             alert("Грешка: корисничкиот ID не е достапен.");
@@ -117,51 +81,60 @@ export default function UserProfile({loggedUser, setLoggedUser, logout}) {
                         {loggedUser ? loggedUser.username : "LOG IN / SIGN IN"}
                     </button>
                 </div>
-                <div className="divpart">
-                    <p>HOME</p>
+                <div className="divpart" onClick={() => navigate("/")}>
+                    <p className="divpartP">HOME</p>
+                </div>
+                <div className="divpart" onClick={() => navigate("/menu")}>
+                    <p className="divpartP">MENU</p>
                 </div>
                 <div className="divpart">
-                    <p>MENU</p>
-                </div>
-                <div className="divpart">
-                    <p>ABOUT US</p>
+                    <p className="divpartP">ABOUT US</p>
                 </div>
             </div>
-            <div><h1 className="theUser">{loggedUser?.username || "No user logged in"}'s profile</h1></div>
-            <div>
-                <div className="separated">
-                    <div><p className="separatedText">Mail</p></div>
-                    <div><input className="separatedInput" value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <div className="flexot">
+                <div className="backgroundBox">
+                    <div className="theUserDiv"><h1
+                        className="theUser">{loggedUser?.username || "No user logged in"}</h1></div>
+                    <div className="allSeparated">
+                        <div>
+                            <div><p className="separatedText">Mail</p></div>
+                            <div><input className="separatedInput" value={email}
+                                        onChange={(e) => setEmail(e.target.value)}/>
+                            </div>
+                        </div>
+                        <div className="separated">
+                            <div>
+                                <div><p className="separatedText">Username</p></div>
+                                <div><input className="separatedInput2" value={username}
+                                            onChange={(e) => setUsername(e.target.value)}/></div>
+                            </div>
+                            <div>
+                                <div><p className="separatedText">Phone number</p></div>
+                                <div><input className="separatedInput2" value={phone}
+                                            onChange={(e) => setPhone(e.target.value)}/>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div><p className="separatedText">Address</p></div>
+                            <div><input className="separatedInput" value={address}
+                                        onChange={(e) => setAddress(e.target.value)}/></div>
+                        </div>
+                        <div>
+                            <div><p className="separatedText">Password</p></div>
+                            <div><input className="separatedInput" type="password" value={password}
+                                        onChange={(e) => setPassword(e.target.value)}/></div>
+                        </div>
+                        <div>
+                            <div><p className="separatedText">Confirm password</p></div>
+                            <div><input className="separatedInput" type="password" value={confirmPassword}
+                                        onChange={(e) => setConfirmPassword(e.target.value)}/></div>
+                        </div>
+                    </div>
+                    <div className="divButton">
+                        <button className="saveButton" onClick={handleSave}>Save</button>
                     </div>
                 </div>
-                <div className="separated">
-                    <div><p className="separatedText">Username</p></div>
-                    <div><input className="separatedInput" value={username}
-                                onChange={(e) => setUsername(e.target.value)}/></div>
-                </div>
-                <div className="separated">
-                    <div><p className="separatedText">Password</p></div>
-                    <div><input className="separatedInput" type="password" value={password}
-                                onChange={(e) => setPassword(e.target.value)}/></div>
-                </div>
-                <div className="separated">
-                    <div><p className="separatedText">Confirm password</p></div>
-                    <div><input className="separatedInput" type="password" value={confirmPassword}
-                                onChange={(e) => setConfirmPassword(e.target.value)}/></div>
-                </div>
-                <div className="separated">
-                    <div><p className="separatedText">Address</p></div>
-                    <div><input className="separatedInput" value={address}
-                                onChange={(e) => setAddress(e.target.value)}/></div>
-                </div>
-                <div className="separated">
-                    <div><p className="separatedText">Phone number</p></div>
-                    <div><input className="separatedInput" value={phone} onChange={(e) => setPhone(e.target.value)}/>
-                    </div>
-                </div>
-            </div>
-            <div className="divButton">
-                <button className="saveButton" onClick={handleSave}>Save</button>
             </div>
         </div>
 

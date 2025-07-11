@@ -13,7 +13,7 @@ export default function SigninPage({setLoggedUser, logout}) {
     const [password, setFirstPassword] = useState("");
     const [mail, setMail] = useState("");
     const [correct_password, setPassword] = useState("");
-    const [address, setAddress] = useState("han");
+    const [address, setAddress] = useState("");
     const [number, setNumber] = useState("");
     const [promotions, setPromotions] = useState("");
     const [terms, setTerms] = useState("");
@@ -113,7 +113,7 @@ export default function SigninPage({setLoggedUser, logout}) {
                                     <div className="radio-button-group">
                                         <label className={selected === "promotions" ? "selected" : ""}>
                                             <input
-                                                type="checkbox" // using checkbox for UI, but acting like radio
+                                                type="checkbox"
                                                 checked={acceptPromotions}
                                                 onChange={() => setAcceptPromotions(!acceptPromotions)}
                                             />

@@ -3,6 +3,7 @@ import HomePage from './HomePage';
 import LoginPage from './LoginPage';
 import SigninPage from "./SigninPage";
 import UserProfile from './UserProfile';
+import MenuPage from './MenuPage';
 import {useState} from "react";
 import {Navigate} from "react-router-dom";
 import {useEffect} from "react";
@@ -78,13 +79,19 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage loggedUser={loggedUser} logout={logout}/>}/>
                 <Route path="/login" element={<LoginPage setLoggedUser={setLoggedUser} logout={logout}/>}/>
-                <Route path="/signin" element={<SigninPage setLoggedUser={setLoggedUser} logout={logout} />}/>
+                <Route path="/signin" element={<SigninPage setLoggedUser={setLoggedUser} logout={logout}/>}/>
                 <Route
                     path="/profile"
                     element={
                         <ProtectedRoute loggedUser={loggedUser}>
-                            <UserProfile loggedUser={loggedUser} setLoggedUser={setLoggedUser} logout={logout} />
+                            <UserProfile loggedUser={loggedUser} setLoggedUser={setLoggedUser} logout={logout}/>
                         </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/menu"
+                    element={
+                        <MenuPage loggedUser={loggedUser} setLoggedUser={setLoggedUser} logout={logout}/>
                     }
                 />
             </Routes>

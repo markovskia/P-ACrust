@@ -1,37 +1,55 @@
 .local-background {
-    background-image: url("./images/white-background.png");
+    background: url("images/red-background.jpg");
+    background-repeat: no-repeat;
     min-height: 100vh;
 }
 
 .theUser {
-    margin-left: 200px;
+    margin: 0px;
     color: #D82B2B;
+}
+
+.theUserDiv {
+    display: flex;
+    justify-content: center;
 }
 
 .separated {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    margin-left: 200px;
+    justify-content: space-between;
 }
 
 .separatedText {
     color: #D82B2B;
     font-size: x-large;
-    padding-right: 100px;
-    width: 350px;
-    text-align: right;
+    margin: 10px 0px;
 }
 
 .separatedInput {
     font-weight: bolder;
     background-color: #D82B2B;
     border: 0px;
-    width: 400px;
+    width: 500px;
     border-radius: 100px;
     padding-left: 20px;
-    color: #f6d8d8;
-    font-size: large;
+    color: white;
+    font-size: x-large;
+    margin: 5px 0px;
+    height: 40px;
+}
+
+.separatedInput2 {
+    font-weight: bolder;
+    background-color: #D82B2B;
+    border: 0px;
+    width: 200px;
+    border-radius: 100px;
+    padding-left: 20px;
+    color: white;
+    font-size: x-large;
+    margin: 5px 0px;
+    height: 40px;
 }
 
 .divButton {
@@ -53,9 +71,9 @@
 }
 
 .separatedInput::placeholder {
-    color: #f6d8d8;
+    color: white;
     font-size: large;
-    opacity: 1;
+    font-weight: bold;
 }
 
 .navigation-bar {
@@ -80,10 +98,38 @@
 }
 
 .divpart {
-    padding: 25px 100px;
+    padding: 25px 70px;
     color: #D82B2B;
+}
+
+.divpartP:hover {
+    color: white;
+    cursor: pointer;
 }
 
 div.nav-right-part > div {
     color: #D82B2B;
+}
+
+.allSeparated {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.backgroundBox {
+    background-color: black;
+    opacity: 65%;
+    padding: 40px 100px;
+    border-radius: 65px;
+}
+
+.flexot {
+    display: flex;
+    justify-content: center;
+}
+
+.phone:hover{
+    color: white;
+    cursor: pointer;
 }

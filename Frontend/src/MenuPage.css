@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'Rubik Dirt';
+    src: url('./fonts/RubikDirt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes spinFadeOut {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinFadeIn {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 0.8;
+        transform: rotate(360deg);
+    }
+}
+
+.spin-fade-out {
+    animation: spinFadeOut 0.7s forwards;
+}
+
+.spin-fade-in {
+    animation: spinFadeIn 0.7s forwards;
+}
+
+body {
+    font-family: "Rubik Dirt", system-ui;
+    font-style: normal;
+    background: url("./images/red-background.jpg");
+    background-repeat: no-repeat;
+}
+
+.menu-page {
+    color: white;
+    height: 100%;
+}
+
+.sidebar {
+    padding: 30px 20px 0px 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo2 {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+
+}
+
+.login-btn {
+    background-color: #d62828;
+    font-family: 'Rubik Dirt', sans-serif;
+    border: none;
+    font-size: 15px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.top-bar {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-btn:hover {
+    background-color: #cc0000;
+}
+
+#root > div > div.promotions > div.promotion-cards > div:nth-child(2) > img {
+        top: -70px;
+
+}
+
+
+.carousel-container {
+    text-align: center;
+    color: #fff;
+    padding: 0px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pizza-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0px;
+}
+
+.pizza-description {
+    max-width: 80%;
+    margin: 0 auto 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.pizza-image-wrapper {
+    height: 310px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    width: 98%;
+    bottom: 0px;
+}
+
+.pizza-images {
+    width: 42%;
+    margin: auto;
+    transition: transform 0.4s ease-in-out;
+    transform-origin: center center;
+}
+
+.pizza-images.rotate {
+    transform: rotate(180deg);
+}
+
+.pizza-image img {
+    width: 100%;
+    height: 200px;
+    border-radius: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+
+}
+
+#slikaprevvrtena {
+    transform: rotateX(180deg);
+}
+
+.pizza-images {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 2rem;
+    padding: 10px 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 30px;
+}
+
+.arrow-button:hover {
+    background-color: #fff;
+    color: #4b0000;
+}
+
+.add-to-cart {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+
+}
+
+.pizza-names-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 300px;
+    bottom: 320px;
+}
+
+.pizza-name-arc {
+    /*width: 550px;*/
+    height: 300px;
+    overflow: visible;
+    margin-top: 200px;
+}
+
+textPath {
+    font-size: 20px;
+    fill: #ccc;
+    transition: fill 0.3s;
+}
+
+textPath.active {
+    fill: red;
+    font-weight: bold;
+}
+
+.main-content {
+    padding: 0;
+}
