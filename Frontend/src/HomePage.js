@@ -26,7 +26,6 @@ export default function HomePage({loggedUser, logout}) {
     return (
         <div>
             <div className="pizza-container">
-                {/* Sidebar Navigation */}
                 <aside className="sidebar">
                     <div className="logodiv">
                         <img className="logo" src={PACrustLogo} alt={PACrustLogo} onClick={() => navigate("/")}/>
@@ -47,7 +46,6 @@ export default function HomePage({loggedUser, logout}) {
                     </nav>
                 </aside>
 
-                {/* Main Content */}
                 <main className="main-content">
                     <div className="top-bar">
                         <div className="phone">📞 075-142-589</div>

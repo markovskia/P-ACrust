@@ -64,7 +64,6 @@ export default function SigninPage({setLoggedUser, logout}) {
                 </div>
             </aside>
 
-            {/* Main Content */}
             <main className="main-content">
                 <div className="top-bar">
                     <div className="phone">📞 075-142-589</div>
