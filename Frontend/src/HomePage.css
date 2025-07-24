@@ -6,6 +6,19 @@
     font-style: normal;
 }
 
+.original-navigation-menu {
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    justify-content: space-around;
+}
+
+.divpart-menu {
+    padding: 25px 70px;
+    color: #D82B2B;
+    visibility: hidden;
+}
+
 body {
     font-family: "Rubik Dirt", system-ui;
     font-style: normal;
@@ -13,9 +26,12 @@ body {
 
 .pizza-container {
     display: flex;
+    color: white;
+}
+
+.background {
     background: url("images/red-background.jpg");
     background-repeat: no-repeat;
-    color: white;
 }
 
 .sidebar {
@@ -26,9 +42,14 @@ body {
     align-items: center;
 }
 
-/*.logodiv{*/
-/*  width: 300px;*/
-/*}*/
+.sidebar-home{
+    padding: 30px 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .logo {
     width: 100px;
     height: 100px;
@@ -115,7 +136,6 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    margin-top: 60px;
 }
 
 .text-section {

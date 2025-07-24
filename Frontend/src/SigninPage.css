@@ -1,14 +1,10 @@
-body {
-  font-family: "Rubik Dirt", system-ui;
-  font-style: normal;
-    background: url("images/red-background.jpg");
-  background-repeat: no-repeat;
-}
 
 .login-container {
   display: flex;
   color: white;
   height: 100%;
+   background: url("images/red-background.jpg");
+  background-repeat: no-repeat;
 }
 
 .sidebar {

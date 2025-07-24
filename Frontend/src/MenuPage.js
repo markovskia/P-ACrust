@@ -120,24 +120,33 @@ export default function MenuPage({loggedUser, logout}) {
     };
 
     useEffect(() => {
-    const firstPizza = 0;
-    setCurrentIndex(firstPizza);
-    setFrontImageIndex(firstPizza);
-    setBackImageIndex((firstPizza + 1) % pizzaData.length);
+        const firstPizza = 0;
+        setCurrentIndex(firstPizza);
+        setFrontImageIndex(firstPizza);
+        setBackImageIndex((firstPizza + 1) % pizzaData.length);
 
-    const newStickers = pizzaData[firstPizza].stickers || [];
-    setStickerPositions(generateRandomPositions(newStickers.length));
-}, []);
+        const newStickers = pizzaData[firstPizza].stickers || [];
+        setStickerPositions(generateRandomPositions(newStickers.length));
+    }, []);
 
     return (
         <div className="menu-page">
-
-            <div className="sidebarmenu">
-                <aside className="sidebar">
-                    <div>
-                        <img className="logo2" src={PACrustLogo} alt={PACrustLogo} onClick={() => navigate("/")}/>
+            <div className="original-navigation-menu">
+                    <div className="navigation-bar">
+                        <div className="logodiv">
+                            <img className="logo" src={PACrustLogo} alt={PACrustLogo} onClick={() => navigate("/")}/>
+                        </div>
+                        <div className="divpart" >
+                            <p className="divpartP" onClick={() => navigate("/")}>HOME</p>
+                        </div>
+                        <div className="divpart" >
+                            <p className="divpartP" onClick={() => navigate("/menu")}>MENU</p>
+                        </div>
+                        <div className="divpart">
+                            <p className="divpartP">ABOUT US</p>
+                        </div>
                     </div>
-                    <div className="top-bar">
+                    <div className="nav-right-part">
                         <div className="phone">📞 075-142-589</div>
                         {loggedUser && (
                             <button className="logout-btn" onClick={logout}>LOG OUT</button>
@@ -155,8 +164,8 @@ export default function MenuPage({loggedUser, logout}) {
                             {loggedUser ? loggedUser.username : "LOG IN / SIGN IN"}
                         </button>
                     </div>
-                </aside>
-            </div>
+                </div>
+
             <main className="main-content">
                 <div className="stickers-container" style={{position: 'relative', width: '100%', height: '100%'}}>
                     {Array.from({length: 7}).map((_, i) => {

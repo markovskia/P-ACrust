@@ -41,21 +41,30 @@ export default function LoginPage({setLoggedUser}) {
 
     return (
         <div className="local-background">
-            <div className="login-container">
-                <aside className="sidebar">
+            <div className="original-navigation-login">
+                <div className="navigation-bar">
                     <div className="logodiv">
-                        <img className="logo2" src={PACrustLogo} alt={PACrustLogo} onClick={() => navigate("/")}/>
+                        <img className="logo" src={PACrustLogo} alt={PACrustLogo} onClick={() => navigate("/")}/>
                     </div>
-                </aside>
-
+                    <div className="divpart-menu" onClick={() => navigate("/")}>
+                        <p className="divpartP">HOME</p>
+                    </div>
+                    <div className="divpart-menu" onClick={() => navigate("/menu")}>
+                        <p className="divpartP">MENU</p>
+                    </div>
+                    <div className="divpart-menu">
+                        <p className="divpartP">ABOUT US</p>
+                    </div>
+                </div>
+                <div className="nav-right-part">
+                    <div className="phone">📞 075-142-589</div>
+                    <button className="login-btn"> LOG IN / SIGN IN</button>
+                </div>
+            </div>
+            <div className="login-container-login">
                 {/* Main Content */}
-                <main className="main-content">
-                    <div className="top-bar">
-                        <div className="phone">📞 075-142-589</div>
-                        <button className="login-btn">LOG IN / SIGN IN</button>
-                    </div>
-
-                    <div className="wrap">
+                <main className="main-content-login">
+                    <div className="wrap-login">
                         <div className="text-part">
                             <h1 className="no-margin">Looking for the best pizza in town?</h1>
                             <h2 className="no-margin">Log in and order NOW!</h2>

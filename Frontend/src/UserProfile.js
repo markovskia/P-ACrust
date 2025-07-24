@@ -15,6 +15,8 @@ export default function UserProfile({loggedUser, setLoggedUser, logout}) {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [address, setAddress] = useState(loggedUser.address || "");
     const [phone, setPhone] = useState(loggedUser.phone || "");
+    const [showDetails, setShowDetails] = useState(true);
+    const [showOrders, setshowOrders] = useState(true);
 
 
     const handleSave = async () => {
@@ -59,10 +61,21 @@ export default function UserProfile({loggedUser, setLoggedUser, logout}) {
         }
     };
     return (
-        <div className="local-background">
-            <div className="navigation-bar">
-                <div className="logodiv">
-                    <img className="logo" src={PACrustLogo} alt={PACrustLogo} onClick={() => navigate("/")}/>
+        <div className="local-background-profile">
+            <div className="original-navigation">
+                <div className="navigation-bar">
+                    <div className="logodiv">
+                        <img className="logo" src={PACrustLogo} alt={PACrustLogo} onClick={() => navigate("/")}/>
+                    </div>
+                    <div className="divpart" >
+                        <p className="divpartP" onClick={() => navigate("/")}>HOME</p>
+                    </div>
+                    <div className="divpart" >
+                        <p className="divpartP" onClick={() => navigate("/menu")}>MENU</p>
+                    </div>
+                    <div className="divpart">
+                        <p className="divpartP">ABOUT US</p>
+                    </div>
                 </div>
                 <div className="nav-right-part">
                     <div className="phone">📞 075-142-589</div>
@@ -81,60 +94,74 @@ export default function UserProfile({loggedUser, setLoggedUser, logout}) {
                         {loggedUser ? loggedUser.username : "LOG IN / SIGN IN"}
                     </button>
                 </div>
-                <div className="divpart" onClick={() => navigate("/")}>
-                    <p className="divpartP">HOME</p>
-                </div>
-                <div className="divpart" onClick={() => navigate("/menu")}>
-                    <p className="divpartP">MENU</p>
-                </div>
-                <div className="divpart">
-                    <p className="divpartP">ABOUT US</p>
-                </div>
             </div>
-            <div className="flexot">
-                <div className="backgroundBox">
-                    <div className="theUserDiv"><h1
-                        className="theUser">{loggedUser?.username || "No user logged in"}</h1></div>
-                    <div className="allSeparated">
-                        <div>
-                            <div><p className="separatedText">Mail</p></div>
-                            <div><input className="separatedInput" value={email}
-                                        onChange={(e) => setEmail(e.target.value)}/>
-                            </div>
-                        </div>
-                        <div className="separated">
-                            <div>
+
+            <div className="backgroundBox">
+                <div className="za_flex" onClick={() => setShowDetails(!showDetails)}>
+                    <h1 className="theUser">Profile</h1>
+                    <span className="arrow-icon">{showDetails ? "▲" : "▼"}</span>
+                </div>
+
+                {showDetails && (
+                    <>
+                        <div className="allSeparated">
+                            <div className="cells">
                                 <div><p className="separatedText">Username</p></div>
-                                <div><input className="separatedInput2" value={username}
+                                <div><input className="separatedInput" value={username}
                                             onChange={(e) => setUsername(e.target.value)}/></div>
                             </div>
-                            <div>
-                                <div><p className="separatedText">Phone number</p></div>
-                                <div><input className="separatedInput2" value={phone}
+                            <div className="cells">
+                                <div>
+                                    <p className="separatedText">Mail</p>
+                                </div>
+                                <div><input className="separatedInput" value={email}
+                                            onChange={(e) => setEmail(e.target.value)}/>
+                                </div>
+                            </div>
+                            <div className="cells">
+                                <div><p className="separatedText">Phone</p></div>
+                                <div><input className="separatedInput" value={phone}
                                             onChange={(e) => setPhone(e.target.value)}/>
                                 </div>
                             </div>
+                            <div className="cells">
+                                <div><p className="separatedText">Address</p></div>
+                                <div><input className="separatedInput" value={address}
+                                            onChange={(e) => setAddress(e.target.value)}/></div>
+                            </div>
+                            <div className="cells">
+                                <div><p className="separatedText">Password</p></div>
+                                <div><input className="separatedInput" type="password" value={password}
+                                            onChange={(e) => setPassword(e.target.value)}/></div>
+                            </div>
+                            <div className="cells">
+                                <div><p className="separatedText">Confirm password</p></div>
+                                <div><input className="separatedInput" type="password" value={confirmPassword}
+                                            onChange={(e) => setConfirmPassword(e.target.value)}/></div>
+                            </div>
                         </div>
-                        <div>
-                            <div><p className="separatedText">Address</p></div>
-                            <div><input className="separatedInput" value={address}
-                                        onChange={(e) => setAddress(e.target.value)}/></div>
+                        <div className="divButton">
+                            <button className="saveButton" onClick={handleSave}>Save</button>
                         </div>
-                        <div>
-                            <div><p className="separatedText">Password</p></div>
-                            <div><input className="separatedInput" type="password" value={password}
-                                        onChange={(e) => setPassword(e.target.value)}/></div>
-                        </div>
-                        <div>
-                            <div><p className="separatedText">Confirm password</p></div>
-                            <div><input className="separatedInput" type="password" value={confirmPassword}
-                                        onChange={(e) => setConfirmPassword(e.target.value)}/></div>
-                        </div>
-                    </div>
-                    <div className="divButton">
-                        <button className="saveButton" onClick={handleSave}>Save</button>
-                    </div>
+                    </>
+                )}
+
+                <div className="za_flex2" onClick={() => setshowOrders(!showOrders)}>
+                    <h1 className="theUser2">Order's history</h1>
+                    <span className="arrow-icon">{showOrders ? "▲" : "▼"}</span>
                 </div>
+
+                {showOrders && (
+                    <>
+                        <div className="allSeparated">
+                            <div className="cells">
+                                <div><p className="separatedText">Username</p></div>
+                                <div><input className="separatedInput" value={username}
+                                            onChange={(e) => setUsername(e.target.value)}/></div>
+                            </div>
+                        </div>
+                    </>
+                )}
             </div>
         </div>
 

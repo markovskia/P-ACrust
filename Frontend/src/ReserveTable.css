@@ -1,0 +1,588 @@
+.local-background-2 {
+    background: #E8C4A1;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+
+.logo-left {
+    margin-left: 50px;
+}
+
+.header-reserve {
+    display: flex;
+    justify-content: center;
+    color: #D82B2B;
+    margin: 50px 0px;
+}
+
+.h1-reserve {
+    margin: 0px;
+}
+
+.divpart2 {
+    padding: 25px 70px;
+    color: #FDEBD0;
+}
+
+.reserve-question {
+    color: #D82B2B;
+    display: flex;
+    justify-content: center;
+}
+
+/*.reserve-question {*/
+/*    margin: 30px 0px;*/
+/*    text-align: center;*/
+/*}*/
+/*.submit-button {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    background-color: #D82B2B;*/
+/*    padding: 10px 30px;*/
+/*    border-radius: 110px;*/
+/*    font-size: x-large;*/
+/*    color: white;*/
+/*    font-family: "Rubik Dirt", system-ui;*/
+/*}*/
+/*.input-num {*/
+/*    font-size: x-large;*/
+/*    width: 40px;*/
+/*    border-radius: 40px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    padding: 0px 20px;*/
+/*    border: 1px solid black;*/
+/*}*/
+/*.overlay {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    background-color: rgba(0, 0, 0, 0.5); !* 50% затемнување *!*/
+/*    z-index: 10;*/
+/*}*/
+/*.reservation-form-box {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    margin-top: 200px;*/
+/*}*/
+/*.onDiv {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    background-color: #F5F1EB;*/
+/*    padding: 50px;*/
+/*    width: 700px;*/
+/*    border-radius: 110px;*/
+/*    font-size: x-large;*/
+/*}*/
+/*.form-table {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    flex-direction: column;*/
+/*}*/
+
+.after-submit-dropdown {
+    text-align: center;
+    background-color: #ffffffdd;
+    padding: 20px 60px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    width: 250px;
+}
+
+.time-gathering {
+    background-color: #ffffffdd;
+    border-radius: 12px;
+    padding: 20px 60px;
+    width: 250px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.dropdown-button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.reserve-question-2 {
+    display: flex;
+    justify-content: center;
+    color: #D82B2B;
+}
+
+.time-title {
+    display: flex;
+    justify-content: center;
+    color: #D82B2B;
+}
+
+.reservation-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.date-picker {
+    background-color: white;
+    cursor: pointer;
+    border: 2px solid #d82b2b;
+    border-radius: 25px;
+    padding: 8px 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 135px;
+}
+
+.dropdown-button {
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid #d82b2b;
+    border-radius: 25px;
+    padding: 8px 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 135px;
+}
+
+.separ {
+    display: flex;
+}
+
+.tables-map {
+    text-align: center;
+    background-color: #ffffffdd;
+    padding: 20px 60px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    width: 250px;
+}
+
+.reservation-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.time-inputs {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.time-input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.time-field {
+    border: 2px solid #d82b2b;
+    border-radius: 25px;
+    padding: 8px 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 90px;
+}
+
+.comment-box {
+    width: 100%;
+    height: 80px;
+    border: 2px solid #d82b2b;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+    font-family: inherit;
+    color: #333;
+}
+
+.comment-box::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.submit-button-time {
+    background-color: #d82b2b;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 999px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Rubik Dirt", system-ui;
+    margin-top: 10px;
+}
+
+.tables-map {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    background-color: #ffffffdd;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+
+.table-group {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+/* Base table */
+.table {
+    position: absolute;
+    background-color: #814b28;
+    z-index: 2;
+}
+
+.oval-table {
+    width: 200px;
+    top: 50px;
+    left: 40px;
+}
+
+.rect-table-1 {
+    top: 20px;
+    left: 350px;
+}
+
+.rect-table-2 {
+    top: 20px;
+    left: 500px;
+}
+
+.rect-table-3 {
+    top: 20px;
+    left: 650px;
+}
+
+.vert-table {
+    top: 150px;
+    left: 690px;
+    height: 115px;
+}
+
+.left-table{
+    position: absolute;
+    left: 35px;
+    top: 125px;
+}
+
+.table.round {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 30px;
+    left: 30px;
+}
+
+.table.oval {
+    width: 160px;
+    height: 60px;
+    border-radius: 30px;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+}
+
+.table.oval-inner {
+    width: 80px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #fdfbf6;
+    top: 40px;
+    left: 60px;
+    position: absolute;
+    z-index: 3;
+}
+
+.table.small-rect {
+    width: 100px;
+    height: 30px;
+    top: 35px;
+    left: 0;
+    border-radius: 8px;
+}
+
+.table.vert-rect {
+    width: 30px;
+    height: 114px;
+    top: 0;
+    left: 35px;
+    border-radius: 8px;
+}
+
+/* Chairs */
+.chair {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #2f3e5c;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.chair.top {
+    top: 30px;
+    left: 25px;
+}
+
+.chair.right {
+    top: 30px;
+    right: 25px;
+}
+
+.chair.bottom {
+    bottom: 30px;
+    right: 25px;
+}
+
+.chair.left {
+    top: 50px;
+    left: 25px;
+}
+
+
+
+/* Oval chairs */
+.oval-chair.chair-0 {
+    top: 10px;
+    left: 90px;
+}
+
+.oval-chair.chair-1 {
+    top: 10px;
+    left: 140px;
+}
+
+.oval-chair.chair-2 {
+    top: 10px;
+    left: 115px;
+}
+
+.oval-chair.chair-3 {
+    top: 70px;
+    left: 140px;
+}
+
+.oval-chair.chair-4 {
+    top: 70px;
+    left: 115px;
+}
+
+.oval-chair.chair-5 {
+    top: 70px;
+    left: 90px;
+}
+
+.oval-chair.chair-6 {
+    top: 70px;
+    left: 65px;
+}
+
+.oval-chair.chair-7 {
+    top: 70px;
+    left: 40px;
+}
+
+.oval-chair.chair-8 {
+    top: 40px;
+    left: 10px;
+}
+
+.oval-chair.chair-9 {
+    top: 40px;
+    left: 170px;
+}
+
+.oval-chair.chair-10 {
+    top: 10px;
+    left: 40px;
+}
+
+.oval-chair.chair-11 {
+    top: 10px;
+    left: 65px;
+}
+
+/* Rect chairs horizontal */
+.small-rect-chair.chair-0 {
+    top: 25px;
+    left: 10px;
+}
+
+.small-rect-chair.chair-1 {
+    top: 25px;
+    left: 40px;
+}
+
+.small-rect-chair.chair-2 {
+    top: 25px;
+    left: 70px;
+}
+
+.small-rect-chair.chair-3 {
+    top: 55px;
+    left: 10px;
+}
+
+.small-rect-chair.chair-4 {
+    top: 55px;
+    left: 40px;
+}
+
+.small-rect-chair.chair-5 {
+    top: 55px;
+    left: 70px;
+}
+
+/* Rect chairs vertical */
+.vert-rect-chair.chair-0 {
+    top: 10px;
+    left: 25px;
+}
+
+.vert-rect-chair.chair-1 {
+    top: 35px;
+    left: 25px;
+}
+
+.vert-rect-chair.chair-2 {
+    top: 60px;
+    left: 25px;
+}
+
+.vert-rect-chair.chair-3 {
+    top: 85px;
+    left: 25px;
+}
+
+.vert-rect-chair.chair-4 {
+    top: 10px;
+    left: 55px;
+}
+
+.vert-rect-chair.chair-5 {
+    top: 35px;
+    left: 55px;
+}
+
+.vert-rect-chair.chair-6 {
+    top: 60px;
+    left: 55px;
+}
+
+.vert-rect-chair.chair-7 {
+    top: 85px;
+    left: 55px;
+}
+
+/* Highlighted */
+.selected-table .table.round {
+    box-shadow: 0 0 15px 5px limegreen;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.tables-map {
+    animation: slideInLeft 0.3s ease-out forwards;
+    animation-delay: 0.05s;
+    opacity: 0;
+}
+
+.after-submit-dropdown {
+    animation: slideInRight 0.3s ease-out forwards;
+    animation-delay: 0.25s;
+    opacity: 0;
+}
+
+.time-gathering {
+    animation: slideInRight 0.3s ease-out forwards;
+    animation-delay: 0.45s;
+    opacity: 0;
+}
+
+.lines{
+    top: 290px;
+    left: 510px;
+    width: 1px;
+    height: 330px;
+    background-color: black;
+    position: absolute;
+}
+
+.lines2{
+    top: 290px;
+    left: 510px;
+    width: 330px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+}
+
+.table-group.available .table {
+    background-color: #4caf50 !important; /* зелена */
+}
+
+.table-group.unavailable .table {
+    background-color: #e53935 !important; /* црвена */
+}
+
+.table-group.selected .table {
+    outline: 3px solid yellow; /* за селектирана */
+}

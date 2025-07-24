@@ -3,6 +3,7 @@ import HomePage from './HomePage';
 import LoginPage from './LoginPage';
 import SigninPage from "./SigninPage";
 import UserProfile from './UserProfile';
+import ReserveTable from "./ReserveTable";
 import MenuPage from './MenuPage';
 import {useState} from "react";
 import {Navigate} from "react-router-dom";
@@ -92,6 +93,14 @@ function App() {
                     path="/menu"
                     element={
                         <MenuPage loggedUser={loggedUser} setLoggedUser={setLoggedUser} logout={logout}/>
+                    }
+                />
+                <Route
+                    path="/reserve"
+                    element={
+                        <ProtectedRoute loggedUser={loggedUser}>
+                            <ReserveTable loggedUser={loggedUser} logout={logout}/>
+                        </ProtectedRoute>
                     }
                 />
             </Routes>

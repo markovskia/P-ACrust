@@ -25,29 +25,23 @@ export default function HomePage({loggedUser, logout}) {
 
     return (
         <div>
-            <div className="pizza-container">
-                <aside className="sidebar">
-                    <div className="logodiv">
-                        <img className="logo" src={PACrustLogo} alt={PACrustLogo} onClick={() => navigate("/")}/>
+            <div className="background">
+                <div className="original-navigation-menu">
+                    <div className="navigation-bar">
+                        <div className="logodiv">
+                            <img className="logo" src={PACrustLogo} alt={PACrustLogo} onClick={() => navigate("/")}/>
+                        </div>
+                        <div className="divpart-menu" onClick={() => navigate("/")}>
+                            <p className="divpartP">HOME</p>
+                        </div>
+                        <div className="divpart-menu" onClick={() => navigate("/menu")}>
+                            <p className="divpartP">MENU</p>
+                        </div>
+                        <div className="divpart-menu">
+                            <p className="divpartP">ABOUT US</p>
+                        </div>
                     </div>
-                    <nav className="nav-links">
-                        <div>
-                            <a className="fontHome" onClick={() => navigate("/menu")}>MENU</a>
-                        </div>
-                        <div>
-                            <a className="fontHome" href="#">RESERVE TABLE</a>
-                        </div>
-                        <div>
-                            <a className="fontHome" href="#">PROMOTIONS</a>
-                        </div>
-                        <div>
-                            <a className="fontHome" href="#">ABOUT US</a>
-                        </div>
-                    </nav>
-                </aside>
-
-                <main className="main-content">
-                    <div className="top-bar">
+                    <div className="nav-right-part">
                         <div className="phone">📞 075-142-589</div>
                         {loggedUser && (
                             <button className="logout-btn" onClick={logout}>LOG OUT</button>
@@ -65,46 +59,68 @@ export default function HomePage({loggedUser, logout}) {
                             {loggedUser ? loggedUser.username : "LOG IN / SIGN IN"}
                         </button>
                     </div>
+                </div>
+                <div className="pizza-container">
+                    <aside className="sidebar-home">
+                        <nav className="nav-links">
+                            <div>
+                                <a className="fontHome" onClick={() => navigate("/menu")}>MENU</a>
+                            </div>
+                            <div>
+                                <a className="fontHome" onClick={() => navigate("/reserve")}>RESERVE TABLE</a>
+                            </div>
+                            <div>
+                                <a className="fontHome" href="#">PROMOTIONS</a>
+                            </div>
+                            <div>
+                                <a className="fontHome" href="#">ABOUT US</a>
+                            </div>
+                        </nav>
+                    </aside>
 
-                    <div className="content-wrapper">
-                        <div className="text-section">
-                            <div className="h1-part">
-                                <p>Hot, Fresh, and<br/>Delivered Fast!</p>
-                            </div>
-                            <div className="p-part">
-                                <p>
-                                    WHETHER YOU'RE INTO CLASSIC PEPPERONI,<br/>
-                                    CHEESY MARGHERITA, OR BOLD NEW FLAVORS,<br/>
-                                    WE'VE GOT THE PERFECT PIZZA FOR YOU. MADE<br/>
-                                    WITH THE FRESHEST INGREDIENTS AND<br/>
-                                    DELIVERED STRAIGHT TO YOUR DOOR—FAST, HOT,<br/>
-                                    AND SATISFYING EVERY TIME.
-                                </p>
-                            </div>
-                            <div className="button-part">
-                                <button
-                                    className="order-btn"
-                                    onClick={() => {
-                                        if (loggedUser) {
-                                            navigate("/menu");
-                                        } else {
-                                            navigate("/login");
-                                        }
-                                    }}
-                                >
-                                    ORDER NOW
-                                </button>
+                    <main className="main-content">
+                        <div className="content-wrapper">
+                            <div className="text-section">
+                                <div className="h1-part">
+                                    <p>Hot, Fresh, and<br/>Delivered Fast!</p>
+                                </div>
+                                <div className="p-part">
+                                    <p>
+                                        WHETHER YOU'RE INTO CLASSIC PEPPERONI,<br/>
+                                        CHEESY MARGHERITA, OR BOLD NEW FLAVORS,<br/>
+                                        WE'VE GOT THE PERFECT PIZZA FOR YOU. MADE<br/>
+                                        WITH THE FRESHEST INGREDIENTS AND<br/>
+                                        DELIVERED STRAIGHT TO YOUR DOOR—FAST, HOT,<br/>
+                                        AND SATISFYING EVERY TIME.
+                                    </p>
+                                </div>
+                                <div className="button-part">
+                                    <button
+                                        className="order-btn"
+                                        onClick={() => {
+                                            if (loggedUser) {
+                                                navigate("/menu");
+                                            } else {
+                                                navigate("/login");
+                                            }
+                                        }}
+                                    >
+                                        ORDER NOW
+                                    </button>
+                                </div>
+
                             </div>
 
+                            <div className="image-section">
+                                <img src={pizzaImage} alt="Pizza"/>
+                            </div>
                         </div>
+                    </main>
 
-                        <div className="image-section">
-                            <img src={pizzaImage} alt="Pizza"/>
-                        </div>
-                    </div>
-                </main>
-
+                </div>
             </div>
+
+
             <div className="dine-section">
                 <div className="text-content">
                     <p className="dine-text">DINE IN WITH US!</p>
