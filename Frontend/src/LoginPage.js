@@ -6,11 +6,16 @@ import secondPizza from "./images/secondPizza.png"
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
+import {GoogleLogin} from "@react-oauth/google";
 
 export default function LoginPage({setLoggedUser}) {
     const navigate = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+
+    const [alertMessage, setAlertMessage] = useState("");
+
+    const [showAlert, setShowAlert] = useState(false);
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -19,11 +24,8 @@ export default function LoginPage({setLoggedUser}) {
                 username,
                 password
             });
-            console.log("Одговор од серверот:", response.data); // Додај го ова
-
 
             if (response.status === 200) {
-                alert("Успешно си најавен")
                 localStorage.setItem('access', response.data.access);
                 localStorage.setItem('refresh', response.data.refresh);
                 setLoggedUser(response.data.user)
@@ -31,13 +33,36 @@ export default function LoginPage({setLoggedUser}) {
                     headers: {Authorization: `Bearer ${response.data.access}`}
                 });
                 setLoggedUser(userResponse.data);
-                navigate("/")
+
+                if (userResponse.data.role === 'administrator') {
+                    navigate("/admin_panel")
+                } else {
+                    navigate("/")
+                }
             }
         } catch (err) {
-            console.error("Грешка:", err); // Додај го ова
-            alert("Најавата не успеа. Провери ги податоците.")
+            setAlertMessage("Login failed. Please check your details.");
+            setShowAlert(true);
         }
     }
+
+    const handleGoogleLogin = async (googleToken) => {
+        try {
+            const response = await axios.post(
+                "http://localhost:8000/api/google-login/",
+                {token: googleToken}
+            );
+
+            localStorage.setItem("access", response.data.access);
+            localStorage.setItem("refresh", response.data.refresh);
+            setLoggedUser(response.data.user);
+            navigate("/");
+        } catch (err) {
+            setAlertMessage("Google login failed");
+            setShowAlert(true);
+        }
+    };
+
 
     return (
         <div className="local-background">
@@ -87,13 +112,20 @@ export default function LoginPage({setLoggedUser}) {
 
                                     <div className="separator">
                                         <hr/>
-                                        <span>Or log in with</span>
+                                        <span>Or</span>
                                         <hr/>
                                     </div>
 
                                     <div className="social-buttons">
-                                        <button className="google-btn">G</button>
-                                        <button className="facebook-btn">f</button>
+                                        <GoogleLogin
+                                            onSuccess={credentialResponse => {
+                                                console.log("Google credential:", credentialResponse);
+                                                handleGoogleLogin(credentialResponse.credential);
+                                            }}
+                                            onError={() => {
+                                                console.log("Login Failed");
+                                            }}
+                                        />
                                     </div>
 
                                     <div className="separator">
@@ -110,6 +142,14 @@ export default function LoginPage({setLoggedUser}) {
 
                 </main>
             </div>
+            {showAlert && (
+                <div className="custom-alert">
+                    <div className="custom-alert-content">
+                        <p>{alertMessage}</p>
+                        <button onClick={() => setShowAlert(false)}>OK</button>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }

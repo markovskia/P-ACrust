@@ -1,0 +1,374 @@
+/* 🌆 Background */
+.local-background-about-us {
+    background: #0D1B2A;
+    min-height: 100vh;
+    color: #333;
+}
+
+.nav-right-part {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* 📄 About Us Container */
+.about-us-container {
+    width: 90%;
+    max-width: 1100px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin: 10px 0px;
+    padding: 0px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #0D1B2A;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #0D1B2A;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 800px;
+    opacity: 80%;
+}
+
+/* 🧩 System Overview */
+.system-section {
+    width: 100%;
+    text-align: left;
+    background: #fff3e0;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 35px;
+}
+
+.system-section h2 {
+    color: #d62828;
+    font-weight: normal;
+    font-size: xx-large;
+    margin: 0px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+    color: #0D1B2A;
+}
+
+/* 💡 Mission Section */
+.mission-section {
+    background: #f8f8f8;
+    border-left: 5px solid #d62828;
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.mission-section h2 {
+    color: #d62828;
+    font-weight: normal;
+    font-size: xx-large;
+    margin: 0px;
+}
+
+.mission-section p {
+    color: #0D1B2A;
+    line-height: 1.6;
+    opacity: 80%;
+}
+
+/* 👨‍🍳 Team Section */
+.team-section {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.team-section h2 {
+    color: #d62828;
+    font-weight: normal;
+    font-size: xx-large;
+    margin: 0px 0px 10px 0px;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.team-card {
+    background: #fff8ef;
+    border: 2px solid #d62828;
+    border-radius: 20px;
+    width: 230px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 145, 77, 0.2);
+}
+
+.team-card .emoji {
+    font-size: 2rem;
+}
+
+.team-card .name {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: #0D1B2A;
+}
+
+.team-card .role {
+    font-size: 1rem;
+    color: #0D1B2A;
+    opacity: 80%;
+}
+
+/* 🎉 Fun Section */
+.fun-section {
+    background: #fff3e0;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.fun-section h2 {
+    color: #d62828;
+    font-weight: normal;
+    font-size: xx-large;
+    margin: 0px;
+}
+
+.fun-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fun-section li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #0D1B2A;
+    opacity: 80%;
+}
+
+/* 📊 Statistics Section */
+.statistics-section {
+    width: 100%;
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.statistics-section h2 {
+    color: #0D1B2A;
+    font-size: 2rem;
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+    font-weight: normal;
+
+}
+
+.charts-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.chart-card {
+    width: 320px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.chart-card h3 {
+    font-size: 1.2rem;
+    margin: 10px;
+    color: #0D1B2A;
+    font-weight: normal;
+}
+
+.chart-card-2 {
+    height: 200px;
+}
+
+/* ⭐⭐⭐ FEATURE BOXES — COLLAPSE + EXPAND ON HOVER ⭐⭐⭐ */
+
+.power-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ← СЕКОГАШ 4 колони */
+    gap: 25px;
+    margin: 25px;
+}
+
+
+.feature-box {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px;
+    border: 2px solid #ffd8b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    /* COLLAPSED MODE */
+    max-height: 90px;
+    overflow: hidden;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease, max-height 0.3s ease;
+    cursor: pointer;
+
+    text-align: center;
+}
+
+.feature-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 18px rgba(255, 122, 0, 0.25);
+
+    /* EXPAND MODE */
+    max-height: 300px;
+}
+
+.feature-box .icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-box h3 {
+    font-size: 1.25rem;
+    color: #d62828;
+    margin: 0;
+    font-weight: normal;
+}
+
+.feature-box p {
+    font-size: 0.98rem;
+    color: #0D1B2A;
+    opacity: 0;
+    line-height: 1.45;
+    margin-top: 10px;
+
+    transition: opacity 0.25s ease;
+}
+
+.feature-box:hover p {
+    opacity: 1;
+}
+
+
+/* 📱 Responsive Design */
+
+@media (max-width: 1024px) {
+    .power-features {
+        grid-template-columns: repeat(2, 1fr); /* на таблети 2 */
+    }
+
+    .about-us-container {
+        padding: 30px;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .system-section,
+    .mission-section,
+    .fun-section {
+        padding: 20px;
+    }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+    .about-us-container {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card {
+        width: 85%;
+    }
+
+    .original-navigation-reservation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-right-part {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .power-features {
+        grid-template-columns: 1fr; /* на телефони 1 */
+    }
+}
+
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .team-card {
+        width: 100%;
+    }
+
+    .features-list li {
+        font-size: 0.9rem;
+    }
+
+}

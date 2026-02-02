@@ -29,10 +29,10 @@ body {
     cursor: pointer;
 }
 
-.main-content{
+.main-content {
 }
 
-.original-navigation-login{
+.original-navigation-login {
     display: flex;
     align-items: center;
     padding: 20px 0px;
@@ -169,7 +169,6 @@ body {
     padding: 5px 10px;
 }
 
-
 .sign-in {
     color: #d62828;
 }
@@ -177,4 +176,74 @@ body {
 .sign-in:hover {
     color: #841919;
     cursor: pointer;
+}
+
+
+.custom-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.custom-alert-content {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 35px;
+    text-align: center;
+    max-width: 300px;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-alert-content p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.custom-alert-content button {
+    padding: 8px 16px;
+    background: #e63946;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.custom-alert-content button:hover {
+    background: #d62828;
+}
+.nsm7Bb-HzV7m-LgbsSe {
+    box-sizing: border-box;
+    -webkit-transition: background-color .218s, border-color .218s;
+    transition: background-color .218s, border-color .218s;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #dadce0;
+    color: #3c4043;
+    cursor: pointer;
+    font-family: "Google Sans", arial, sans-serif;
+    font-size: 14px;
+    height: 40px;
+    letter-spacing: .25px;
+    outline: none;
+    overflow: hidden;
+    padding: 0 12px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+    border-radius: 100px;
 }

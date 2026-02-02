@@ -7,8 +7,12 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
 
-export default function SigninPage({setLoggedUser, logout}) {
+export default function SigninPage({loggedUser, setLoggedUser, logout}) {
     const navigate = useNavigate();
+
+    const [name, setName] = useState(loggedUser ? loggedUser.username : "");
+    const [city, setCity] = useState(loggedUser ? loggedUser.city : "");
+
     const [username, setUsername] = useState("");
     const [password, setFirstPassword] = useState("");
     const [mail, setMail] = useState("");
@@ -17,6 +21,7 @@ export default function SigninPage({setLoggedUser, logout}) {
     const [number, setNumber] = useState("");
     const [promotions, setPromotions] = useState("");
     const [terms, setTerms] = useState("");
+
     const [selected, setSelected] = useState(null);
 
     const [acceptPromotions, setAcceptPromotions] = useState(false);
@@ -70,7 +75,7 @@ export default function SigninPage({setLoggedUser, logout}) {
                     <button className="login-btn">LOG IN / SIGN IN</button>
                 </div>
 
-                <div className="wrap">
+                <div className="wrap-signin">
                     <div className="text-part">
                         <h1 className="no-margin">Looking for the best pizza in town?</h1>
                         <h2 className="no-margin">Log in and order NOW!</h2>
@@ -78,14 +83,19 @@ export default function SigninPage({setLoggedUser, logout}) {
                     <div className="login-part">
                         <div className="form-container">
                             <form className="login-form" onSubmit={handleRegister}>
+                                <div className="input-group">
+                                    <input type="text" placeholder="Name" value={name}
+                                           onChange={(e) => setName(e.target.value)}/>
+                                </div>
+
+                                <div className="input-group">
+                                    <input type="text" placeholder="Username" value={username}
+                                           onChange={(e) => setUsername(e.target.value)}/>
+                                </div>
 
                                 <div className="input-group">
                                     <input type="text" placeholder="Mail" value={mail}
                                            onChange={(e) => setMail(e.target.value)}/>
-                                </div>
-                                <div className="input-group">
-                                    <input type="text" placeholder="Username" value={username}
-                                           onChange={(e) => setUsername(e.target.value)}/>
                                 </div>
 
                                 <div className="input-group">
@@ -101,6 +111,11 @@ export default function SigninPage({setLoggedUser, logout}) {
                                 <div className="input-group">
                                     <input type="text" placeholder="Address" value={address}
                                            onChange={(e) => setAddress(e.target.value)}/>
+                                </div>
+
+                                <div className="input-group">
+                                    <input type="text" placeholder="City" value={city}
+                                           onChange={(e) => setCity(e.target.value)}/>
                                 </div>
 
                                 <div className="input-group">

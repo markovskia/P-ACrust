@@ -8,6 +8,10 @@ import MenuPage from './MenuPage';
 import {useState} from "react";
 import {Navigate} from "react-router-dom";
 import {useEffect} from "react";
+import AboutUsPage from './AboutUsPage';
+import CheckOut from './CheckOut';
+import AdminPanel from "./AdminPanel";
+import EmployeePanel from "./EmployeePanel";
 import axios from 'axios';
 
 
@@ -75,12 +79,36 @@ function App() {
         }
     }, [loggedUser]);
 
+    const [cartItems, setCartItems] = useState(() => {
+        const saved = localStorage.getItem("cart");
+        return saved ? JSON.parse(saved) : [];
+    });
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cartItems));
+    }, [cartItems]);
+
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<HomePage loggedUser={loggedUser} logout={logout}/>}/>
                 <Route path="/login" element={<LoginPage setLoggedUser={setLoggedUser} logout={logout}/>}/>
-                <Route path="/signin" element={<SigninPage setLoggedUser={setLoggedUser} logout={logout}/>}/>
+                <Route path="/signin"
+                       element={<SigninPage loggedUser={loggedUser} setLoggedUser={setLoggedUser} logout={logout}/>}/>
+                <Route path="/about_us"
+                       element={<AboutUsPage loggedUser={loggedUser} setLoggedUser={setLoggedUser} logout={logout}/>}/>
+
+                <Route path="/admin_panel" element={loggedUser?.role === "administrator" ?
+                    <AdminPanel loggedUser={loggedUser} logout={logout}/>
+                    : <Navigate to="/"/>
+                }/>
+
+                <Route path="/employee_panel" element={loggedUser?.role === "employee" ?
+                    <EmployeePanel loggedUser={loggedUser} logout={logout}/>
+                    : <Navigate to="/"/>
+                }/>
+
+
                 <Route
                     path="/profile"
                     element={
@@ -89,10 +117,32 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
+
+                <Route
+                    path="/checkout"
+                    element={
+                        <ProtectedRoute loggedUser={loggedUser}>
+                            <CheckOut
+                                loggedUser={loggedUser}
+                                setLoggedUser={setLoggedUser}
+                                logout={logout}
+                                cartItems={cartItems}
+                                setCartItems={setCartItems}
+                            />
+                        </ProtectedRoute>
+                    }
+                />
+
                 <Route
                     path="/menu"
                     element={
-                        <MenuPage loggedUser={loggedUser} setLoggedUser={setLoggedUser} logout={logout}/>
+                        <MenuPage
+                            loggedUser={loggedUser}
+                            setLoggedUser={setLoggedUser}
+                            logout={logout}
+                            cartItems={cartItems}
+                            setCartItems={setCartItems}
+                        />
                     }
                 />
                 <Route

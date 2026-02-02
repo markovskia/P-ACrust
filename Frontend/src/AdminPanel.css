@@ -1,0 +1,1307 @@
+.logodiv-checkout-admin {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #0D1B2A;
+    align-items: center;
+    border-radius: 100px;
+
+}
+
+.oval-white {
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.message-photo {
+    width: 16px;
+    height: 16px;
+}
+
+.to-home {
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.navigation-bar-admin {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 0px 0px 0px;
+}
+
+.admin-item {
+    width: 15%;
+    height: 30px;
+    padding: 25px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FF7F50;
+    border-radius: 30px 100px;
+    color: white;
+    font-size: medium;
+    transition: all 0.3s ease-in-out;
+}
+
+.admin-item.selected {
+    background-color: #0D1B2A;
+    color: white;
+    border-radius: 100px 30px;
+    transform: scale(1.1); /* little grow effect */
+}
+
+.dashboard {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    margin: 50px;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.two-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-container,
+.table-container {
+    width: 45%;
+    background-color: #0D1B2A;
+    padding: 20px;
+    border-radius: 40px;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+.table-container-2 {
+    width: 70%;
+    background-color: #0D1B2A;
+    padding: 20px;
+    border-radius: 40px;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+.earnings-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.earnings-table thead {
+    color: #FF7F50;
+}
+
+.earnings-table th,
+.earnings-table td {
+    padding: 10px;
+    border-bottom: 1px solid white;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.chart-titles {
+    font-weight: normal;
+    margin: 0px 0px 20px 0px;
+    color: #FF7F50;
+}
+
+.chart-titles-2 {
+    font-weight: normal;
+    margin: 0px 0px 0px 0px;
+    color: #FF7F50;
+}
+
+/* Container for both tables */
+.change-products-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1300px;
+}
+
+.user-profiles-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 30px auto;
+    width: 90%;
+}
+
+/* Each box (left and right) */
+.change-box {
+    flex: 1;
+    background-color: #0d1b2a; /* dark navy background */
+    border-radius: 30px;
+    padding: 30px 20px;
+    color: white;
+    text-align: center;
+    width: 90%;
+}
+
+.table-wrapper {
+    overflow-y: auto;
+    max-height: 440px;
+    padding-right: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar {
+    width: 5px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #ff7f50;
+    border-radius: 2px;
+}
+
+
+.add-btn-class {
+    margin: 20px 0px 0px 0px;
+}
+
+/* Tables */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+
+.admin-table-2 td {
+    height: 57px;
+}
+
+.admin-table th {
+    border-bottom: 1px solid white;
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.admin-table td {
+    border-bottom: 1px solid white;
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: lighter;
+    /*height: 101px;*/
+}
+
+.admin-table thead {
+    color: #FF7F50;
+}
+
+/* Inputs */
+.admin-table input {
+    width: 90%;
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Save button */
+.save-btn {
+    background-color: white;
+    color: #0d1b2a;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #ff7f50;
+    color: #0d1b2a;
+}
+
+.fade-in {
+    animation: fadeSlideIn 0.5s ease forwards;
+}
+
+
+.change-box {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.change-box:hover {
+    transform: scale(1.02); /* slight hover effect */
+}
+
+.user-box {
+    background: #0d1724;
+    border-radius: 50px;
+    padding: 30px 20px;
+    color: white;
+    text-align: center;
+    width: 80%;
+    margin: 30px auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.user-box:hover {
+    transform: scale(1.02); /* slight hover effect */
+}
+
+.profiles-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.profiles-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.profiles-table thead {
+    color: #FF7F50;
+
+}
+
+.profiles-table th,
+.profiles-table td {
+    padding: 12px;
+    border-bottom: 1px solid white;
+    font-weight: lighter;
+    text-align: center;
+
+}
+
+.profiles-table td {
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.remove-btn {
+    background: #FF7F50;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.remove-btn:hover {
+    transform: scale(1.05);
+}
+
+.edit-btn {
+    background: #eee;
+    color: #FF7F50;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.edit-btn:hover {
+    transform: scale(1.05);
+}
+
+.save-btn-container {
+    margin-top: 20px;
+}
+
+.save-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.save-btn:hover {
+    transform: scale(1.05);
+}
+
+.change-width {
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.save-btn-2 {
+    background: #FF7F50;
+    color: #0d1724;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.save-btn-2:hover {
+    transform: scale(1.05);
+}
+
+.cancel-btn {
+    background: white;
+    color: #0d1724;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.cancel-btn:hover {
+    transform: scale(1.05);
+}
+
+
+.gap-it {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.add-btn {
+    background: #FF7F50;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.add-btn:hover {
+    transform: scale(1.05);
+}
+
+.toggle-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.toggle-btn {
+    background: transparent;
+    border: none;
+    color: gray;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.toggle-btn.active {
+    color: white;
+}
+
+.separator {
+    color: gray;
+
+}
+
+.separator2 {
+    display: flex;
+    align-items: center;
+    width: 10%;
+    margin: 20px 0;
+    color: #888;
+    font-size: 14px;
+    justify-content: center;
+}
+
+.inactive {
+    color: gray;
+}
+
+.promo-input {
+    background: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.promo-input.usage {
+    width: 80px;
+}
+
+
+.toggle-cell-disc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.toggle-cell-usage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 180px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 10;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none; /* so it doesn’t block hover */
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.section-tabs {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.section-tabs .tab {
+    background: white;
+    opacity: 100%;
+    border: 2px solid #FF7F50;
+    border-radius: 25px;
+    padding: 5px 20px;
+    color: #FF7F50;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 20%;
+    font-family: "Rubik Dirt", system-ui !important;
+    font-style: normal;
+    text-align: center;
+}
+
+.section-tabs .tab:hover {
+    background-color: #FF7F50;
+    color: white;
+}
+
+.section-tabs .tab.active {
+    background-color: #d82b2b;
+    color: white;
+}
+
+
+.earnings-table th {
+    border-bottom: 3px solid #FF7F50;
+    color: #FF7F50;
+}
+
+.earnings-table td {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.earnings-table td.num {
+    font-variant-numeric: tabular-nums;
+}
+
+.earnings-table tbody tr:hover {
+    background-color: rgba(255, 127, 80, 0.15);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.loading-text {
+    color: #FF7F50;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.descri-css {
+    width: 25%;
+}
+
+.data-items {
+    overflow-y: auto;
+    max-height: 450px;
+    padding-right: 10px;
+}
+
+.data-items::-webkit-scrollbar {
+    width: 5px;
+}
+
+.data-items::-webkit-scrollbar-thumb {
+    background-color: #ff7f50;
+    border-radius: 2px;
+}
+
+.oval-white {
+    position: relative;
+    cursor: pointer;
+}
+
+.messages-wrapper {
+    position: relative; /* за absolute на popup */
+    display: inline-block;
+}
+
+.hover-messages-popup {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.hover-message-item {
+    border-bottom: 1px solid #eee;
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+}
+
+.delete-message-btn {
+    background-color: #FF7F50;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-size: 0.8rem;
+}
+
+.delete-message-btn:hover {
+    background-color: #ca603d;
+}
+
+.hover-message-item:last-child {
+    border-bottom: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1250px) {
+    .profiles-table th, .profiles-table td {
+        padding: 4px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > h2 {
+        font-weight: normal;
+        margin: 0px 0px 10px 0px;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    #root > div > div.user-profiles-container.fade-in > div > table > thead > tr > th, td {
+        font-size: small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > h2 {
+        font-size: medium;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div {
+        padding: 20px 20px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.remove-btn {
+        font-size: small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.edit-btn {
+        font-size: small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.save-btn-2 {
+        font-size: small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.cancel-btn {
+        font-size: small;
+    }
+
+
+    .navigation-bar-admin {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .user-profiles-container {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 935px) {
+    #root > div > div.user-profiles-container.fade-in > div > table > thead > tr > th,
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody td {
+        font-size: x-small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > h2 {
+        font-size: medium;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div {
+        padding: 20px 20px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.remove-btn {
+        font-size: x-small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.edit-btn {
+        font-size: x-small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.save-btn-2 {
+        font-size: x-small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.cancel-btn {
+        font-size: x-small;
+    }
+
+    .change-width {
+        padding: 5px;
+        width: 80%;
+        border-radius: 10px;
+        height: 1px;
+        font-size: xx-small;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .actions {
+        gap: 5px;
+    }
+
+    .oval-white {
+        width: 25px;
+        height: 25px;
+    }
+
+    .message-photo {
+        width: 10px;
+        height: 10px;
+    }
+
+    .to-home {
+        font-size: x-small;
+    }
+
+    .admin-item {
+        font-size: x-small;
+        width: 10%;
+        height: 15px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > h2 {
+        font-size: small;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .chart-titles, .chart-titles-2 {
+        font-size: small;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .admin-table th {
+        font-size: small;
+    }
+
+    .admin-table td {
+        font-size: x-small;
+        padding: 0px 8px;
+        height: 51px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > thead > tr > th {
+        padding: 2px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > thead > tr > th,
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody td {
+        font-size: xx-small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody td {
+        padding: 0px 2px;
+        height: 51px;
+    }
+
+    .remove-btn, .edit-btn, .add-btn, .cancel-btn, .save-btn-2, #root > div > div.change-products-container.fade-in > div > table > tbody > tr:nth-child(2) > td:nth-child(5) > input[type=file] {
+        padding: 3px 10px;
+        font-size: xx-small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.remove-btn {
+        padding: 2px 6px;
+        font-size: xx-small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.edit-btn {
+        padding: 2px 6px;
+        font-size: xx-small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.save-btn-2 {
+        font-size: xx-small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.cancel-btn {
+        font-size: xx-small;
+    }
+
+    .admin-table input {
+        width: 90%;
+        padding: 6px 6px;
+        border-radius: 8px;
+        border: none;
+        font-size: x-small;
+        outline: none;
+    }
+
+    .change-box {
+        padding: 20px 20px;
+    }
+
+    .navigation-bar-admin {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .user-profiles-container {
+        margin: 20px auto;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody td {
+        font-size: 7px;
+        padding: 0px 1px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > thead > tr > th {
+        font-size: 7px;
+    }
+
+    .remove-btn, .edit-btn, .add-btn, .cancel-btn, .save-btn-2, #root > div > div.change-products-container.fade-in > div > table > tbody > tr:nth-child(2) > td:nth-child(5) > input[type=file] {
+        padding: 2px 6px;
+        font-size: 8px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.remove-btn {
+        padding: 2px 6px;
+        font-size: 8px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.edit-btn {
+        padding: 2px 6px;
+        font-size: 8px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.save-btn-2 {
+        padding: 2px 6px;
+        font-size: 8px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.cancel-btn {
+        padding: 2px 6px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #root > div > div.user-profiles-container.fade-in > div > h2 {
+        font-size: x-small;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .admin-table th {
+        font-size: x-small;
+    }
+
+    .admin-table td {
+        font-size: xx-small;
+        padding: 0px 8px;
+        height: 51px;
+    }
+
+    .change-box {
+        padding: 10px 20px;
+    }
+
+    .admin-table input {
+        width: 90%;
+        padding: 6px 5px;
+        border-radius: 9px;
+        border: none;
+        font-size: x-small;
+        outline: none;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody td {
+        font-size: 7px;
+        padding: 0px 1px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > thead > tr > th {
+        font-size: 7px;
+    }
+
+    .logodiv-checkout-admin {
+        padding: 5px 0px;
+    }
+
+    .navigation-bar-admin {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .user-profiles-container {
+        margin: 10px auto;
+    }
+
+    .chart-titles, .chart-titles-2 {
+        font-size: x-small;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .profiles-table th {
+        font-size: 8px;
+    }
+
+    .profiles-table td {
+        font-size: 6px;
+        padding: 0px 1px;
+        height: 40px;
+    }
+
+    .remove-btn, .edit-btn, .add-btn, .cancel-btn, .save-btn-2, #root > div > div.change-products-container.fade-in > div > table > tbody > tr:nth-child(2) > td:nth-child(5) > input[type=file] {
+        padding: 2px 6px;
+        font-size: 6px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.remove-btn {
+        padding: 2px 6px;
+        font-size: 6px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.edit-btn {
+        padding: 2px 6px;
+        font-size: 6px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.save-btn-2 {
+        padding: 2px 6px;
+        font-size: 6px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.cancel-btn {
+        padding: 2px 6px;
+        font-size: 6px;
+    }
+
+    .profiles-table {
+        margin-bottom: 0px;
+    }
+
+    .change-width {
+        padding: 4px;
+        width: 60%;
+        border-radius: 4px;
+        height: 1px;
+        font-size: 5px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .logodiv-checkout-admin {
+        padding: 5px 0px;
+    }
+
+    .navigation-bar-admin {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .user-profiles-container {
+        margin: 10px auto;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > h2 {
+        font-size: x-small;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .chart-titles, .chart-titles-2 {
+        font-size: x-small;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .profiles-table th {
+        font-size: 8px;
+    }
+
+    .profiles-table td {
+        font-size: 6px;
+        padding: 0px 1px;
+        height: 40px;
+    }
+
+    .remove-btn, .edit-btn, .add-btn, .cancel-btn, .save-btn-2, #root > div > div.change-products-container.fade-in > div > table > tbody > tr:nth-child(2) > td:nth-child(5) > input[type=file] {
+        padding: 2px 6px;
+        font-size: 6px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.remove-btn {
+        padding: 2px 6px;
+        font-size: 6px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.edit-btn {
+        padding: 2px 6px;
+        font-size: 6px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.save-btn-2 {
+        padding: 2px 6px;
+        font-size: 6px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.cancel-btn {
+        padding: 2px 6px;
+        font-size: 6px;
+    }
+
+    .profiles-table {
+        margin-bottom: 0px;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    .oval-white {
+        width: 15px;
+        height: 15px;
+    }
+
+    .message-photo {
+        width: 7px;
+        height: 7px;
+    }
+
+    .to-home {
+        font-size: xx-small;
+    }
+
+    .admin-item {
+        font-size: 7px;
+        width: 8%;
+        height: 15px;
+        padding: 20px
+    }
+
+    .admin-table td {
+        font-size: 8px;
+        padding: 0px 2px;
+        height: 60px;
+    }
+
+    .remove-btn, .edit-btn, .add-btn, .cancel-btn, .save-btn-2, #root > div > div.change-products-container.fade-in > div > table > tbody > tr:nth-child(2) > td:nth-child(5) > input[type=file] {
+        padding: 2px 5px;
+        font-size: 6px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.remove-btn {
+        padding: 2px 5px;
+        font-size: 6px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.edit-btn {
+        padding: 2px 5px;
+        font-size: 6px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.save-btn-2 {
+        padding: 2px 5px;
+        font-size: 6px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.cancel-btn {
+        padding: 2px 5px;
+        font-size: 6px;
+    }
+
+    .admin-table {
+        margin-bottom: 10px;
+    }
+
+    .admin-table th {
+        font-size: xx-small;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > h2 {
+        font-size: x-small;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .chart-titles, .chart-titles-2 {
+        font-size: x-small;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .change-products-container {
+        margin: 20px auto;
+    }
+
+    .navigation-bar-admin {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .admin-table input {
+        width: 70%;
+        padding: 0px 3px;
+        border-radius: 9px;
+        border: none;
+        font-size: 8px;
+        outline: none;
+    }
+
+    .profiles-table {
+        margin-bottom: 0px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .logodiv-checkout-admin {
+        padding: 5px 0px;
+    }
+
+    .navigation-bar-admin {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .user-profiles-container {
+        margin: 10px auto;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > h2 {
+        font-size: xx-small;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .chart-titles, .chart-titles-2 {
+        font-size: xx-small;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .profiles-table th {
+        font-size: 5px;
+    }
+
+    .profiles-table td {
+        font-size: 5px;
+        padding: 0px 1px;
+    }
+
+    .remove-btn, .edit-btn, .add-btn, .cancel-btn, .save-btn-2, #root > div > div.change-products-container.fade-in > div > table > tbody > tr:nth-child(2) > td:nth-child(5) > input[type=file] {
+        padding: 2px 5px;
+        font-size: 5px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.remove-btn {
+        padding: 2px 5px;
+        font-size: 5px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.edit-btn {
+        padding: 2px 5px;
+        font-size: 5px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.save-btn-2 {
+        padding: 2px 5px;
+        font-size: 5px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.cancel-btn {
+        padding: 2px 5px;
+        font-size: 5px;
+    }
+
+    .profiles-table {
+        margin-bottom: 0px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody td {
+        font-size: 5px;
+        padding: 0px 1px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > thead > tr > th {
+        font-size: 5px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .logodiv-checkout-admin {
+        padding: 5px 0px;
+    }
+
+    .navigation-bar-admin {
+        margin: 0px 0px 0px 0px;
+    }
+
+    .user-profiles-container {
+        margin: 0px auto;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > h2 {
+        font-size: 8px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .chart-titles, .chart-titles-2 {
+        font-size: 8px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .profiles-table th {
+        font-size: 4px;
+    }
+
+    .profiles-table td {
+        font-size: 4px;
+        padding: 0px 1px;
+    }
+
+    .remove-btn, .edit-btn, .add-btn, .cancel-btn, .save-btn-2, #root > div > div.change-products-container.fade-in > div > table > tbody > tr:nth-child(2) > td:nth-child(5) > input[type=file] {
+        padding: 2px 3px;
+        font-size: 4px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.remove-btn {
+        padding: 2px 3px;
+        font-size: 4px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.edit-btn {
+        padding: 2px 3px;
+        font-size: 4px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.save-btn-2 {
+        padding: 2px 3px;
+        font-size: 4px;
+    }
+
+    #root > div > div.user-profiles-container.fade-in > div > table > tbody button.cancel-btn {
+        padding: 2px 3px;
+        font-size: 4px;
+    }
+
+    .admin-item {
+        font-size: 5px;
+        width: 5%;
+        height: 12px;
+        padding: 15px;
+    }
+
+    .logodiv-checkout-admin {
+        padding: 1px 0px;
+    }
+}
